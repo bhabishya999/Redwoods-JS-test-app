@@ -30,6 +30,7 @@ const AddComment = ({id}) => {
     awaitRefetchQueries: true,
     onCompleted: () => {
       toast.success('Comment added')
+      formMethods.reset()
     },
     onError: (error) => {
       toast.error(error.message)
